@@ -1,0 +1,19 @@
+<template name='input'>
+<!--  <input name='testinput' class='test-input' type='text' uniqid="{{uniqid}}" value="{{value}}">
+  <button class='remove-input' uniqid="{{uniqid}}">Remove</button>
+-->
+<!--
+<div class="controls">
+  <input name="member" id="member{{uniqid}}" type="text" value="{{value}}" placeholder="member" class="form-control"/>
+  <span class="glyphicon glyphicon-minus" id='remove-input' uniqid="{{uniqid}}" role="button"></span>
+</div>
+-->
+
+<div class="input-group"><span class="input-group-addon">@</span>
+    <input name="member" id="member{{uniqid}}" type="email" parsley-type="email" value="{{value}}" placeholder="member mail" class="form-control"/>
+    <span class="input-group-addon" id='remove-input' uniqid="{{uniqid}}" role="button"><b>-</b></span>
+</div>
+
+<br/>
+
+</template>
