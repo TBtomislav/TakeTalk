@@ -14,11 +14,11 @@ Meteor.methods({
   },
 
   //Permet de réinitiliser la base de données
-  resetAll: function() {
-    Session.set("meetingId", "");
-    Session.set("userId", "");
-    Speeches.remove({});
-    MeetingUsers.remove({});
-    Meetings.remove({});
-  }
+    // resetAll: function() {
+    //   Session.set("meetingId", "");
+    //   Session.set("userId", "");
+    //   Speeches.remove({});
+    //   MeetingUsers.remove({});
+    //   Meetings.remove({});
+    // }
 });

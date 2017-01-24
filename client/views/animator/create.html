@@ -1,7 +1,5 @@
 <template name="create">
-<div class="page-head">
-    <h2>{{_ "createTitle"}}</h2>
-</div>
+
 <div class="main-content">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -27,19 +25,11 @@
                             <input id="meetingName" name="meetingName" type="text" class="form-control" required>
                         </div>
 
-                        <div class="form-group">
-                            <label for="reportLink">{{_ "createLink"}}</label>
-                            <input id="reportLink" name="reportLink" type="url" class="form-control">
-                        </div>
 
                         <div class="form-group">
-                            <label>Agenda</label>
+                            <label>{{_ "Meeting Duration"}}</label>
                             <div class="agenda-group" rank="1">
                                 <div class="row">
-                                    <div class="col-sm-9 xs-mb-15"><div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-list-alt"></i></span>
-                                        <input class="agenda-name-input form-control" name="ordreDuJour" type="text">
-                                    </div></div>
                                     <div class="col-sm-3 xs-mb-15"><div class="input-group">
                                         <input min="1" parsley-type="number" class="agenda-time-input form-control" name="ordreDuJourTemps" type="number">
                                         <span class="input-group-addon">min</span>

@@ -15,11 +15,11 @@
   <body cz-shortcut-listen="true">
 
     <div class="am-wrapper am-nosidebar-left">
-      <nav class="navbar navbar-default navbar-fixed-top am-top-header" style="background-color:#00838F">
+      <nav class="navbar navbar-default navbar-fixed-top am-top-header">
         <div class="container-fluid">
           <div class="navbar-header">
             <div class="page-title">
-              <a href="{{pathFor route='home'}}" class="navbar-brand title-font">TakeTalk</a>
+              <a href="{{pathFor route='home'}}" class="navbar-brand title-font"><img src="/LOGO.png" height="" width="100%" style="display:inline"></a>
             </div>
           </div>
           <a href="#" data-toggle="collapse" data-target="#am-navbar-collapse" class="am-toggle-top-header-menu collapsed">
@@ -30,7 +30,6 @@
               <li><a href="{{pathFor route='home'}}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
               <li><a href="{{pathFor route='tutorial'}}">{{_ "tuto"}}</a></li>
               <li><a href="{{pathFor route='downloads'}}">{{_ "downloads"}}</a></li>
-              <li><h2>{{meeting}}</h2></li>
               <li><a href="{{pathFor route='groups'}}">{{_ "groups"}}</a></li>
 
               <!-- langue-->
@@ -42,24 +41,17 @@
                   <li>{{> i18n_buttons}}</li>
                 </ul>
               </li>
-              <!--fin -->
+              <ul class="nav navbar-text navbar-right">
 
-              <!-- Pour l'ajout d'un menu d�roulant
-              <li class="dropdown">
-              <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">Services
-              <span class="angle-down s7-angle-down" aria-hidden="true"></span>
-            </a>
-            <ul role="menu" class="dropdown-menu">
-            <li><a href="{{pathFor route='tutorial'}}">Tutorial</a></li>
-            <li><a href="{{pathFor route='downloads'}}">Downloads</a></li>
-          </ul>
-        </li>
-      -->
+                <li class="navbar-text">
+                  {{#if isAnimator}}Meeting Duration : / {{/if}}
+                </li>
+                <li class="navbar-text h4">
+                  {{meeting}}
+                </li>
+
+              </ul>
     </ul>
-    <!-- tom start-->
-
-
-
     <ul class="nav navbar-nav navbar-right">
       {{> loginButtons}}
     </ul>

@@ -50,12 +50,12 @@ Template.create.events({
     'submit form': function(e) {
         e.preventDefault();
         //Récupération des éléments DOM des champs de saisie
-        var ordreInputs = e.target.ordreDuJour;
+        //var ordreInputs = e.target.ordreDuJour;
         var ordreTimeInputs = e.target.ordreDuJourTemps;
         var participantsInputs = e.target.participantsEmails;
 
         //Récupération des valeurs de l'ordre du jour, temps estimés et des emails d'invitation
-        var ordres = [];
+        //var ordres = [];
         var ordreTimes = [];
         var participantsEmails = [];
 
@@ -66,12 +66,12 @@ Template.create.events({
         }
         console.log(participantsEmails);
 
-        for (i = 0; i < ordreInputs.length; i++) {
-            if (ordreInputs[i].value != "") {
-                ordres.push(ordreInputs[i].value);
-                ordreTimes.push(ordreTimeInputs[i].value);
-            }
-        }
+        // for (i = 0; i < ordreInputs.length; i++) {
+        //     if (ordreInputs[i].value != "") {
+        //         ordres.push(ordreInputs[i].value);
+        //         ordreTimes.push(ordreTimeInputs[i].value);
+        //     }
+        // }
 
         //Création du mot de passe du meeting
         var pass = Math.floor((Math.random() * 10000) + 1);
@@ -87,10 +87,10 @@ Template.create.events({
         var meetingId = Meetings.insert({
             name: e.target.meetingName.value,
             status: "ongoing",
-            ordres: ordres,
+            //ordres: ordres,
             ordreTimes: ordreTimes,
             password: pass,
-            reportLink: (e.target.reportLink.value !== undefined) ? e.target.reportLink.value : ""
+            //reportLink: (e.target.reportLink.value !== undefined) ? e.target.reportLink.value : ""
         });
 
         //Création de l'utilisateur animateur
@@ -106,13 +106,13 @@ Template.create.events({
 
         //Définition du corp du mail envoyé à l'animateur et aux invités
         var emailBody = 'Here is the link for the meeting : taketalk.meteor.com/join/' + meetingId + '/' + userId + '\n';
-        emailBody += (e.target.reportLink.value !== undefined) ? 'Here is the link of the report : ' + e.target.reportLink.value + '\n\n' : "";
+        //emailBody += (e.target.reportLink.value !== undefined) ? 'Here is the link of the report : ' + e.target.reportLink.value + '\n\n' : "";
         emailBody += 'If you quit the meeting and want to return, here is the password : ' + pass;
 
         //Alimentation des variable de la session
         Session.set("meetingId", meetingId);
         Session.set("userId", userId);
-        Session.set("ordres", ordres);
+        //Session.set("ordres", ordres);
         Session.set("ordreTimes", ordreTimes);
 
         //Envoi du mail à l'animateur
