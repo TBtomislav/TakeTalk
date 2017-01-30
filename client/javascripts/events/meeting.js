@@ -19,7 +19,7 @@ Template.meeting.onRendered(function () {
     // if (MeetingUsers.findOne({_id: Session.get("userId")}).type == "animator") {
     //     computeSortable(sortableList);
     // }
-  });  
+  });
 });
 
 Template.meeting.events({
@@ -86,16 +86,16 @@ Template.meeting.events({
   'click #talkCancel': function(e) {
     console.log("I click on Talk");
     //à modifier
-    var userId = Session.get("userId");
+    var name = Meteor.user().username;
     var rank = 1;
-    console.log("userId = " + userId);
+    console.log("UserName = " + name);
     //Recherche du speech ayant le plus haut rang
     speeches = Speeches.find({meeting: Session.get("meetingId")}, {sort: {rank: -1}}).fetch();
     if (speeches.length > 0) {
       rank = speeches[0].rank+1;
     }
     Speeches.insert({
-      user: userId,
+      user: name,
       timeLeft: 0,
       status: "pending",
       meeting: Session.get("meetingId"),

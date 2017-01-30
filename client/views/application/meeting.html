@@ -39,13 +39,11 @@
               <div class="col-md-4">
                 <input type="button" class="btn btn-primary" role="button" id="talkCancel" value="{{talk}}">
               </div>
-              {{#if isAnimator}}
               <!-- Boutons de gestion du don de temps de parole -->
               <div class="col-md-8 text-right">
                 <input type="button" class="btn btn-primary" role="button" id="waitProceed" value="{{proceed}}" {{disabled}}>
                 <input type="button" class="btn btn-primary" role="button" id="next" value="Next" {{disabled}}>
               </div>
-              {{/if}}
             </div>
             <div class="row" id="speech-list">
               <div style="margin-top:10px"></div>
@@ -124,13 +122,11 @@
     </div>
 
     <!-- Boutons d'actions de l'animateur-->
-    {{#if isAnimator}}
     <div class="col-md-12">
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#localModal">{{_ "meetingAdd"}}</button>
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#invitationModal">{{_ "meetingInvite"}}</button>
       <button type="button" class="btn btn-danger" role="button" id="closeMeeting">{{_ "meetingClose"}}</button>
     </div>
-    {{/if}}
   </div>
 </div>
 </div> <!-- row des 3 colonnes -->
