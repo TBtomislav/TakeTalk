@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
   font-family: 'Airstream';
   src: url('../fonts/Airstream.eot');
   src: url('../fonts/Airstream.eot?#iefix') format('embedded-opentype'),
@@ -9,11 +9,12 @@
   font-weight: normal;
   font-style: normal;
 }
-
+*/
+/*
 .title-font{
   font-family: 'Airstream', sans-serif;
 }
-
+*/
 #qrcode {
   width: 160px;
   height: 160px;

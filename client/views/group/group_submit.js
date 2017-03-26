@@ -28,7 +28,6 @@ Template.groupSubmit.events({
     var name = [];;
     var members = [];
 
-    console.log(membersInputs.length);
 
     for (i = 0; i < membersInputs.length; i++) {
       if (membersInputs[i].value != "") {

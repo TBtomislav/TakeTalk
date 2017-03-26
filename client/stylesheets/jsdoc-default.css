@@ -1,3 +1,4 @@
+/*
 @font-face {
     font-family: 'Open Sans';
     font-weight: normal;
@@ -23,6 +24,8 @@
         url('../fonts/OpenSans-Light-webfont.woff') format('woff'),
         url('../fonts/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
 }
+
+*/
 /*
 html
 {
@@ -53,11 +56,11 @@ body
     display: block;
     padding: 0px 4px;
 }
-
+/*
 #doc tt, #doc code, #doc kbd, #doc samp {
     font-family: Consolas, Monaco, 'Andale Mono', monospace;
 }
-
+*/
 #doc .class-description {
     font-size: 130%;
     line-height: 140%;
@@ -110,7 +113,7 @@ body
 }
 
 #doc nav ul {
-    font-family: 'Lucida Grande', 'Lucida Sans Unicode', arial, sans-serif;
+  /*  font-family: 'Lucida Grande', 'Lucida Sans Unicode', arial, sans-serif;*/
     font-size: 100%;
     line-height: 17px;
     padding: 0;
@@ -119,7 +122,7 @@ body
 }
 
 #doc nav ul a, #doc nav ul a:visited, #doc nav ul a:active {
-    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  /*  font-family: Consolas, Monaco, 'Andale Mono', monospace;*/
     line-height: 18px;
     color: #4D4E53;
 }
@@ -147,7 +150,7 @@ body
 
 #doc h1
 {
-    font-family: 'Open Sans Light', sans-serif;
+/*    font-family: 'Open Sans Light', sans-serif;*/
     font-size: 48px;
     letter-spacing: -2px;
     margin: 12px 24px 20px;
@@ -210,11 +213,11 @@ body
 #doc .type-signature {
     color: #aaa;
 }
-
+/*
 #doc .name, #doc .signature {
     font-family: Consolas, Monaco, 'Andale Mono', monospace;
 }
-
+*/
 #doc .details { margin-top: 14px; border-left: 2px solid #DDD; }
 #doc .details dt { width: 120px; float: left; padding-left: 10px;  padding-top: 6px; }
 #doc .details dd { margin-left: 70px; }
@@ -305,7 +308,7 @@ body
 
 #doc .params .name, #doc .props .name, #doc .name code {
     color: #4D4E53;
-    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  /*  font-family: Consolas, Monaco, 'Andale Mono', monospace;*/
     font-size: 100%;
 }
 

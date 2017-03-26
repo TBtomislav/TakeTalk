@@ -1,16 +1,31 @@
 /** The collection that contains the speeches */
 Speeches = new Mongo.Collection("speeches");
 
-/*
-Exemple:
+Speeches.allow({
+  update: function() { return true/*return ownsDocument(userId, group);*/ },
+  remove: function() { return true },
+  insert: function() {
+    return true;
+  }
+ });
 
- id : 1
- subject: t.find("#keywords").value,
- timeLeft: 0,
- time: submitTime,
- orderChoose: order,
- timeString: "",
- status: "pending",
- user: userId,
- meeting: Session.get("meetingId")
- */
+
+ Meteor.methods({
+     speechesInsert: function(speechesAttributes) {
+
+         check(speechesAttributes, {
+             meetingID: String/*,
+             speakers: [String]
+             */
+         });
+
+
+
+         var speechesId = Speeches.insert(speechesAttributes);
+
+
+         return {
+             _id: speechesId
+         };
+     }
+ });

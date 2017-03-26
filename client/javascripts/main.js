@@ -1,4 +1,5 @@
-Meteor.subscribe('groups');
+//Meteor.subscribe('groups');
+Meteor.subscribe('speeches');
 //accountsUIBootstrap3.setLanguage('fr');
 
 getUserLanguage = function () {
@@ -18,7 +19,6 @@ getUserLanguage = function () {
 
 if (Meteor.isClient) {
   Meteor.startup(function () {
-      console.log("coucou");
     Session.set("showLoadingIndicator", true);
 /*
     TAPi18n.setLanguage(language).done(function () {
@@ -31,7 +31,6 @@ if (Meteor.isClient) {
 
     TAPi18n.setLanguage(getUserLanguage())
       .done(function () {
-        console.log("test");
         Session.set("showLoadingIndicator", false);
       })
       .fail(function (error_message) {
