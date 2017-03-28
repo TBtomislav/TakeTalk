@@ -1,0 +1,20 @@
+
+
+<template name="hello">
+    <!-- <h2>Video Chat</h2> -->
+    <div id="video-container">
+      <!-- note the 'autoplay' -->
+      Your friend: <video id="theirVideo" class="theirVideo" autoplay></video>
+      <video id="myVideo" muted="true" class="myVideo" autoplay display="none"></video>
+    </div>
+
+    <h2>Controls</h2>
+    <div>
+      <p>Your id: <span id="myPeerId">...</span></p>
+      <p>Make a call</p><br>
+      {{#each users}}
+        <p><a href="#" id="makeCall">Call {{#each emails}}{{address}}{{/each}}</a></p>
+      {{/each}}
+      <p><a href="#" id="endCall">End Call</a></p>
+    </div>
+</template>

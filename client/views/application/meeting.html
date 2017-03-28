@@ -4,6 +4,9 @@
 
 <!--    {{onLoad}}-->
     <div class="col-md-8">
+      <!-- {{> audioConf}} -->
+      {{> hello}}
+
         {{> meetingReport}}
 
         {{> pptcont}}
@@ -41,7 +44,7 @@
           <div class="panel-heading"><span class="title">Participant</span></div>
           <div class="panel-body">
             <div class="row">
-              <div class="col-md-5">
+              <div class="col-md-7">
                 <span class="label label-info input-group-addon" >
                   {{animatorMail}}
 
@@ -61,15 +64,19 @@
                 {{/if}}
               </div>
 
-              <div class="col-md-7 text-right">
+              {{#if ownMeeting}}
+
+              <div class="col-md-5 text-right">
                 <input type="button" class="btn btn-primary" role="button" id="speakControl" value="take" {{disabled}}>
               </div>
+              {{/if}}
+
             <br/> <br/><br/>
             </div>
 
             {{#each participantsEmails}}
             <div class="row">
-              <div class="col-md-5">
+              <div class="col-md-7">
                 <span class="label label-info input-group-addon" >
                   {{this}}
                   {{#if partMeeting}}
@@ -89,7 +96,7 @@
                 {{/if}}
 
               </div>
-              <div class="col-md-7 text-right">
+              <div class="col-md-5 text-right">
                 {{#if ownMeeting}}
                 <input type="button" class="btn btn-primary" role="button" id="speakControl" value="give" {{disabled}}>
                 {{/if}}
@@ -150,9 +157,9 @@
           </div>
           <!--End People on meeting -->
           <div class="row-md-4">
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#localModal">Add local participant</button>
+              <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#localModal">Add local participant</button> -->
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#invitationModal">Invite participants</button>
-              <button type="button" class="btn btn-danger" role="button" id="closeMeeting">Close meeting</button>
+              <!-- <button type="button" class="btn btn-danger" role="button" id="closeMeeting">Close meeting</button> -->
 
   </div>
     <!-- Fin partie droite -->
@@ -189,13 +196,13 @@
           <label class="control-label">Your participants' e-mails</label>
           <div class="participantEmailInput" rank="1">
             <div class="input-group xs-mb-15"><span class="input-group-addon">@</span>
-              <input class="participantsEmails form-control" name="participantsEmails" type="email" parsley-type="email">
+              <input class="participantsEmails form-control" name="participantsEmails" type="email" parsley-type="email" id="newParticipant">
             </div>
           </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button id="inviteSubmit" type="submit" class="btn btn-primary">Invite</button>
+          <button id="inviteSubmit" type="button" class="btn btn-primary" data-dismiss="modal">Invite</button>
         </div>
       </form>
     </div>

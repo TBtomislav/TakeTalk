@@ -130,6 +130,15 @@ Template.meeting.events({
     Speeches.update(speeches._id , {$push: {speakers: mail }} );
 },
 
+'click #inviteSubmit' : function(e){
+  meeting=Session.get("meeting");
+  //speeches=Speeches.findOne({myMeetingId:meeting._id});
+
+  var newParticipant=document.querySelectorAll('#newParticipant')[0].value;
+  Meetings.update(meeting._id , {$push: {participantsEmails: newParticipant }} );
+},
+
+
 
   'click #talkCancel' : function(e){
     console.log("I click on Talk");
